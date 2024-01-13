@@ -12,7 +12,7 @@
       "position": "middle",
       "status": 2,
       "image": "ability_backstab",
-      "text": "Jugement : lance un marteau sacré qui inflige 1D6 de dégâts",
+      "text": "Jugement : lance un marteau sacré qui inflige 1D6",
       "improvementOf": null,
       "isSquare": true,
       "hasLineColor": false,
