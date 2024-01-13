@@ -4,11 +4,10 @@ import { useState } from "react";
 
 import SkillTree from "../skillTree";
 import styled from "styled-components";
-import backgroundPaladin from "../asserts/images/paladin/background_filter.png";
-import { getDataSkillTree } from "../utils/data";
+import { getBackgroundSection, getDataSkillTree } from "../utils/data";
 
 const SectionSkillTree = styled.section`
-  background-image: url(${backgroundPaladin});
+  background-image: url(${(props) => getBackgroundSection(props.character)});
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -61,7 +60,7 @@ const Menu = () => {
     {
       label: "Guerrier",
       value: CHARACTER_CLASS.GUERRIER,
-      disabled: true,
+      disabled: false,
     },
     {
       label: "Paladin",
@@ -70,8 +69,9 @@ const Menu = () => {
     },
   ];
   const handleChooseCharacter = (classCharacter) => {
+    console.log(classCharacter)
     setCharacter(classCharacter);
-    setData(getDataSkillTree(character));
+    setData(getDataSkillTree(classCharacter));
   };
 
   const handleStart = () => {
@@ -130,7 +130,11 @@ const Menu = () => {
               </Row>
             </Form>
           </section>
-          <SectionSkillTree id="container-skill-tree" style={{ width: "100%" }}>
+          <SectionSkillTree
+            id="container-skill-tree"
+            style={{ width: "100%" }}
+            character={character}
+          >
             <SkillTree
               points={points}
               character={character}

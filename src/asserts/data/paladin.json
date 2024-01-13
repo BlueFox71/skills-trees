@@ -1,7 +1,7 @@
 {
-  "lineColor": "yellow",
+  "lineColor": "#FFFF00",
   "skillColor": "#f740de",
-  "primaryColor": "orange",
+  "primaryColor": "#CB5F12",
   "count": 80,
   "itemsRoot": [
     {
