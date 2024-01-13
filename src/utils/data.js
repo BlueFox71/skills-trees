@@ -5,7 +5,6 @@ import backgroundPaladin from "../asserts/images/paladin/background_filter.png";
 import backgroundGuerrier from "../asserts/images/guerrier/background_filter.png";
 
 export const getDataSkillTree = (character) => {
-  console.log("data", character)
   switch (character) {
   
     case CHARACTER_CLASS.PALADIN: {

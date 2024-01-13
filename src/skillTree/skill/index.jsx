@@ -145,7 +145,6 @@ const Skill = ({
   };
 
   const generateSkill = () => {
-    console.log(item)
     return (
       <SkillStyled top={`${top}px`} left={`${left}px`}>
         <StyledLine

@@ -10,9 +10,7 @@ const SectionSkillTree = styled.section`
   background-image: url(${(props) => getBackgroundSection(props.character)});
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 1800px;
-  opacity: 1;
+  height: 1820px;
 `;
 
 const Menu = () => {
@@ -68,8 +66,8 @@ const Menu = () => {
       disabled: false,
     },
   ];
+
   const handleChooseCharacter = (classCharacter) => {
-    console.log(classCharacter)
     setCharacter(classCharacter);
     setData(getDataSkillTree(classCharacter));
   };
@@ -85,11 +83,11 @@ const Menu = () => {
     setSimulationInProgress(false);
   };
   return (
-    <div style={{ backgroundColor: "#272a35" }}>
-      <section style={{ paddingTop: "50px" }}>
-        <Row align={"center"} style={{ width: "60%", margin: "0 auto" }}>
+    <div className="container" style={{ backgroundColor: "#272a35" }}>
+      <section className="section-buttons-characters">
+        <Row align={"center"} style={{ width: "100%", margin: "0 auto" }}>
           {buttons.map((item) => (
-            <Col span={4}>
+            <Col>
               <Button
                 style={{ margin: "5px" }}
                 className={`button-menu ${item.value}`}
@@ -130,11 +128,7 @@ const Menu = () => {
               </Row>
             </Form>
           </section>
-          <SectionSkillTree
-            id="container-skill-tree"
-            style={{ width: "100%" }}
-            character={character}
-          >
+          <SectionSkillTree id="container-skill-tree" character={character}>
             <SkillTree
               points={points}
               character={character}

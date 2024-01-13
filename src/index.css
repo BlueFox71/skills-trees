@@ -159,3 +159,36 @@ body {
   cursor: default;
   opacity: 0.24;
 }
+
+#container-skill-tree {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.section-buttons-characters {
+  padding-top: 50px;
+}
+
+.dashboard {
+  left: -400px;
+}
+
+@media screen and (max-width: 920px) {
+  #container-skill-tree {
+    width: 1300px;
+  }
+  .container {
+    width: 1300px;
+  }
+  .section-buttons-characters {
+    padding-top: 0px;
+    width: 420px;
+  }
+
+  .dashboard {
+    left: -100px;
+  }
+}

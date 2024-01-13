@@ -7,7 +7,6 @@ import { CopyOutlined } from "@ant-design/icons";
 const BlocStyled = styled.div`
   position: absolute;
   top: 30px;
-  left: -400px;
   background-color: white;
   width: 500px;
   height: 200px;
@@ -82,7 +81,7 @@ const DashBoard = ({
     simulationInProgress && (
       <>
         {contextHolder}
-        <BlocStyled>
+        <BlocStyled className="dashboard">
           <Row>
             <Col span={10}>
               <DivLevel>{`Niv. ${level}`}</DivLevel>
