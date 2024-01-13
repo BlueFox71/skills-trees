@@ -25,6 +25,7 @@ const DivPoints = styled.div`
   font-size: 20px;
   text-align: center;
   margin: 2px;
+  opacity: 1;
 `;
 
 const StyledImage = styled.img`
