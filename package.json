@@ -2,7 +2,7 @@
   "name": "skill-tree",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://bluefox71.github.io/skills-tree",
+  "homepage": "https://bluefox71.github.io/skills-trees",
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@testing-library/jest-dom": "^5.17.0",
