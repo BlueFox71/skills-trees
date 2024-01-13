@@ -118,10 +118,11 @@ const SkillTree = ({
           skillColor={skillColor}
           onSelect={handleSelectSkill}
           visual={visual}
+          character={character}
         />
       );
     },
-    [visual, handleSelectSkill]
+    [visual, handleSelectSkill, character]
   );
 
   const generateNodes = useCallback(
@@ -261,6 +262,7 @@ const SkillTree = ({
               level={level}
               simulationInProgress={simulationInProgress}
               skillColor={data.skillColor}
+              character={character}
             />
             <div style={{ position: "relative" }} id="container">
               {currentSkills}

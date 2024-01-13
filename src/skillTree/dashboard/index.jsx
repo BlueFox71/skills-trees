@@ -43,19 +43,31 @@ const DashBoard = ({
   level,
   simulationInProgress,
   skillColor,
+  character
 }) => {
   const [messageApi, contextHolder] = message.useMessage();
 
   const handleCopied = () => {
-    let res = "Sorts :\n";
+    let res = "Liste des talents au niveau "+level+":\n";
+    let usedIds = []
+
     selectedSkills
       .filter((item) => item.isSquare)
       .forEach((item) => {
-        res += "  - " + item.text + "\n";
+        res += "  - " + item.text;
+        const skillsWithImprovement = selectedSkills.filter(
+          (x) => !x.isSquare && x.improvementOf !== null && x.improvementOf[0] === item.id
+        )
+        skillsWithImprovement.forEach(y  => {
+          res += " + "+ y.text
+          usedIds.push(y.id)
+        })
+        res += '\n'
       });
-    res += "\nPassives :\n";
+
+      console.log(usedIds)
     selectedSkills
-      .filter((item) => !item.isSquare)
+      .filter((item) => !item.isSquare && !usedIds.includes(item.id))
       .forEach((item) => {
         res += "  - " + item.text + "\n";
       });
@@ -95,7 +107,7 @@ const DashBoard = ({
                         <StyledImage
                           color={skillColor}
                           isSquare={item.isSquare}
-                          src={require(`../../asserts/images/paladin/${item.image}.jpg`)}
+                          src={require(`../../asserts/images/${character}/${item.image}.jpg`)}
                         />
                       </Tooltip>
                     )
@@ -110,7 +122,7 @@ const DashBoard = ({
                         <StyledImage
                           color={skillColor}
                           isSquare={item.isSquare}
-                          src={require(`../../asserts/images/paladin/${item.image}.jpg`)}
+                          src={require(`../../asserts/images/${character}/${item.image}.jpg`)}
                         />
                       </Tooltip>
                     )
@@ -130,6 +142,7 @@ DashBoard.propTypes = {
   level: PropTypes.number,
   simulationInProgress: PropTypes.bool,
   skillColor: PropTypes.string,
+  character: PropTypes.string,
 };
 
 export default DashBoard;

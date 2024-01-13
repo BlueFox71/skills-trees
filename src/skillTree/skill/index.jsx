@@ -67,6 +67,7 @@ const Skill = ({
   visual,
   onSelect,
   skills,
+  character
 }) => {
   const [transformLine, setTransformLine] = useState(TRANSFORM_LINE.MIDDLE);
   const [transformSkill, setTransformSkill] = useState(TRANSFORM_SKILL.MIDDLE);
@@ -159,7 +160,7 @@ const Skill = ({
               color={currentSkillColor}
               transform={transformSkill}
               isSquare={item.isSquare}
-              src={require(`../../asserts/images/paladin/${item.image}.jpg`)}
+              src={require(`../../asserts/images/${character}/${item.image}.jpg`)}
               grayscale={
                 visual || item.status !== STATUS_SKILL.CANNOT_BE_SELECTED
               }
@@ -195,6 +196,7 @@ Skill.propTypes = {
   status: PropTypes.number,
   onSelect: PropTypes.func,
   skills: PropTypes.array,
+  character: PropTypes.string,
 };
 
 export default Skill;
