@@ -1,4 +1,7 @@
-export const addTop = (position, parentPosition) => {
+export const addTop = (position, parentPosition, topToAdd) => {
+  if(topToAdd){
+    return topToAdd
+  }
   switch (position) {
     case POSITION_SKILL.MIDDLE:
       if (POSITION_SKILL.MIDDLE === parentPosition) return 90;
@@ -38,7 +41,10 @@ export const addTop = (position, parentPosition) => {
   }
 };
 
-export const addLeft = (position, parentPosition) => {
+export const addLeft = (position, parentPosition, leftToAdd) => {
+  if(leftToAdd){
+    return leftToAdd
+  }
   switch (position) {
     case POSITION_SKILL.MIDDLE:
       if (POSITION_SKILL.MIDDLE === parentPosition) return 0;

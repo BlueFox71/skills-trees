@@ -1,8 +1,12 @@
 {
   "lineColor": "#FFFF00",
-  "skillColor": "#f740de",
+  "skillColor": "#FF7BAC",
   "primaryColor": "#CB5F12",
   "count": 80,
+  "firstWay": "voie de la vertue",
+  "secondWay": "voie de la justice",
+  "firstWayLeft": 100,
+  "secondWayLeft": 550,
   "itemsRoot": [
     {
       "id": "r-1",
@@ -662,7 +666,11 @@
           "isSquare": false,
           "hasLineColor": false,
           "parentsLines": null,
-          "nodes": null
+          "nodes": null,
+          "customPosition": {
+            "topToAdd": 63,
+            "leftToAdd": 39
+          }
         },
         {
           "id": "2-2-2",
@@ -734,7 +742,11 @@
           "isSquare": false,
           "hasLineColor": false,
           "parentsLines": null,
-          "nodes": null
+          "nodes": null,
+          "customPosition": {
+            "topToAdd": 122,
+            "leftToAdd": 18
+          }
         },
         {
           "id": "2-2-5",
@@ -976,7 +988,7 @@
       "nodes": null
     }
   ],
-  "itemsFourth": [
+  "itemsLast": [
     {
       "id": "4-1",
       "parentId": ["r-4"],

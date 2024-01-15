@@ -10,7 +10,8 @@ const SectionSkillTree = styled.section`
   background-image: url(${(props) => getBackgroundSection(props.character)});
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1820px;
+  height: 1850px;
+  margin-left: -5px;
 `;
 
 const Menu = () => {
@@ -70,6 +71,9 @@ const Menu = () => {
   const handleChooseCharacter = (classCharacter) => {
     setCharacter(classCharacter);
     setData(getDataSkillTree(classCharacter));
+    setVisual(true);
+    setSimulationInProgress(false);
+
   };
 
   const handleStart = () => {
@@ -81,6 +85,7 @@ const Menu = () => {
   const handleReset = () => {
     setPoints(data.count);
     setSimulationInProgress(false);
+    setVisual(true);
   };
   return (
     <div className="container" style={{ backgroundColor: "#272a35" }}>

@@ -13,7 +13,18 @@ import DashBoard from "./dashboard";
 const RootStyled = styled.div`
   position: absolute;
   top: ${(props) => props.top};
-  left: ${(props) => props.left};
+  left: ${(props) => props.left}px;
+`;
+
+const SpanStyled = styled.span`
+  position: absolute;
+  top: -15px;
+  left: ${(props) => props.left}px;
+  width: 500px;
+  color: ${(props) => props.color};
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "Goudy Stout";
 `;
 
 const SkillTree = ({
@@ -31,7 +42,6 @@ const SkillTree = ({
 
   const handleSelectSkill = useCallback(
     (item) => {
-      console.log(item);
       if (!visual && simulationInProgress && remainingPoints > 0) {
         const childrens = currentSkills.filter((x) =>
           x.props.item.parentId?.includes(item.id)
@@ -46,10 +56,14 @@ const SkillTree = ({
             if (child.props.item.status !== STATUS_SKILL.IS_SELECTED) {
               child.props.item.status = STATUS_SKILL.CAN_BE_SELECTED;
             }
+
             if (child.props.item.parentId[0] === item.id) {
               child.props.item.hasLineColor = true;
             } else {
-              child.props.item.parentsLines[0].hasLineColor = true;
+              const index = child.props.item.parentId.indexOf(item.id);
+              if (index !== -1) {
+                child.props.item.parentsLines[index - 1].hasLineColor = true;
+              }
             }
             if (
               child.props.item.image === null &&
@@ -132,8 +146,16 @@ const SkillTree = ({
         let leftNode = left;
         let parentPositionNode = parentPosition;
         item.nodes.forEach((item) => {
-          topNode += addTop(item.position, parentPositionNode, item.id);
-          leftNode += addLeft(item.position, parentPositionNode, item.id);
+          topNode += addTop(
+            item.position,
+            parentPositionNode,
+            item.customPosition?.topToAdd
+          );
+          leftNode += addLeft(
+            item.position,
+            parentPositionNode,
+            item.customPosition?.leftToAdd
+          );
           skills.push(
             getSkill(item, topNode, leftNode, lineColor, skillColor, false)
           );
@@ -156,6 +178,9 @@ const SkillTree = ({
 
   const generateMainBranch = useCallback(
     (items, lineColor, skillColor, topInit, leftInit) => {
+      if ((items && items.length === 0) || !items) {
+        return [];
+      }
       let top = topInit;
       let left = leftInit;
       let parentPosition = null;
@@ -163,8 +188,16 @@ const SkillTree = ({
       let skills = [];
 
       items.forEach((item) => {
-        top += addTop(item.position, parentPosition, item.id);
-        left += addLeft(item.position, parentPosition, item.id);
+        top += addTop(
+          item.position,
+          parentPosition,
+          item.customPosition?.topToAdd
+        );
+        left += addLeft(
+          item.position,
+          parentPosition,
+          item.customPosition?.leftToAdd
+        );
         parentPosition = item.position;
 
         skills.push(getSkill(item, top, left, lineColor, skillColor, first));
@@ -191,6 +224,7 @@ const SkillTree = ({
         itemsSecond,
         itemsThird,
         itemsFourth,
+        itemsLast,
         lineColor,
         skillColor,
       } = data;
@@ -200,7 +234,8 @@ const SkillTree = ({
         ...generateMainBranch(itemsFirst, lineColor, skillColor, 0, 0),
         ...generateMainBranch(itemsSecond, lineColor, skillColor, 0, 450),
         ...generateMainBranch(itemsThird, lineColor, skillColor, 0, 480),
-        ...generateMainBranch(itemsFourth, lineColor, skillColor, 0, 900),
+        ...generateMainBranch(itemsFourth, lineColor, skillColor, 0, 450),
+        ...generateMainBranch(itemsLast, lineColor, skillColor, 0, 900),
       ];
       setCurrentSkills(skills);
     }
@@ -255,6 +290,12 @@ const SkillTree = ({
                 translate={"0,0"}
                 length={903}
               />
+              <SpanStyled left={data.firstWayLeft} color={data.skillColor}>
+                {data.firstWay}
+              </SpanStyled>
+              <SpanStyled left={data.secondWayLeft} color={data.skillColor}>
+                {data.secondWay}
+              </SpanStyled>
             </RootStyled>
             <DashBoard
               remainingPoints={remainingPoints}

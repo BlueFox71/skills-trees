@@ -1,0 +1,1412 @@
+{
+  "lineColor": "#F15A24",
+  "skillColor": "#0000FF",
+  "primaryColor": "#B7B7AE",
+  "count": 80,
+  "firstWay": "voie des éléments",
+  "secondWay": "voie de la restauration",
+  "firstWayLeft": 140,
+  "secondWayLeft": 520,
+  "itemsRoot": [
+    {
+      "id": "r-1",
+      "parentId": null,
+      "first": true,
+      "withoutLine": true,
+      "position": "middle",
+      "status": 2,
+      "image": "spell_firefrost-orb",
+      "text": "Jugement : lance un marteau sacré qui inflige 1D6 de dégâts",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "r-2",
+      "parentId": ["r-1"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Marteau divin : étourdit un ennemi",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": true,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "r-3",
+      "parentId": ["r-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Lumière sacrée : soigne de 1D4",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "r-4",
+      "parentId": ["r-3"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Sagesse +1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    }
+  ],
+  "itemsFirst": [
+    {
+      "id": "1-1",
+      "parentId": ["r-4"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Bouclier vertueux: lance votre bouclier qui rebondit et frappe 3 ennemis max, inflige 1D4",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-2",
+      "parentId": ["1-1"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Efficacité bouclier +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-3",
+      "parentId": ["1-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Pv + 1D8",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-4",
+      "parentId": ["1-3"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "touche 2 ennemis en plus",
+      "improvementOf": ["1-1", "Bouclier vertueux"],
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-5",
+      "parentId": ["1-4"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "peut toucher plusieurs ennemis",
+      "improvementOf": ["r-2", "Marteau divin"],
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-6",
+      "parentId": ["1-5"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Vous pouvez dévier certains sorts avec votre bouclier",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-7",
+      "parentId": ["1-6"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Main de sacrifice : transfert jusqu'à 1D6 points dégâts d'un allié à vous",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-8",
+      "parentId": ["1-7", "2-3-4"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Constitution + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -90,
+          "left": 170,
+          "rotation": 65,
+          "length": 320,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "1-9",
+      "parentId": ["1-8"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Rend 2 Pv si jet constitution <= 15",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-10",
+      "parentId": ["1-9"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Pv + 1D8",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-11",
+      "parentId": ["1-10"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Efficacité bouclier +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-12",
+      "parentId": ["1-11", "2-3-8"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Imposition des mains: rend 1D100 à un allié",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -90,
+          "left": 170,
+          "rotation": 65,
+          "length": 320,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "1-13",
+      "parentId": ["1-12"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Réssurection : ramène à la vie un allié avec 2PV fonctionne qu'une fois par personne et par combat",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-14",
+      "parentId": ["1-13"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Soigner un allié rend 2 PV à vous",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-15",
+      "parentId": ["1-14"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Gardien des anciens rois : réduit de moitié les dégâts subits pendant plusieurs tours",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    }
+  ],
+  "itemsSecond": [
+    {
+      "id": "2-1",
+      "parentId": ["r-4"],
+      "first": true,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Lumière : crée une lumière pouvant aveuglée",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "2-1-1",
+          "parentId": ["2-1", "3-1"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "éducation +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": -30,
+              "left": 70,
+              "rotation": 40,
+              "length": 130,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "2-1-2",
+          "parentId": ["2-1-1"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Purification : dissipe les effets de poison et maladie",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": [
+            {
+              "id": "2-1-2-1",
+              "parentId": ["2-1-2", "3-3"],
+              "first": false,
+              "position": "right-bottom",
+              "status": 1,
+              "image": "spell_firefrost-orb",
+              "text": "soigne 1D6",
+              "improvementOf": ["r-3", "Lumière sacrée"],
+              "isSquare": false,
+              "hasLineColor": false,
+              "parentsLines": [
+                {
+                  "top": -10,
+                  "left": 50,
+                  "rotation": 30,
+                  "length": 100,
+                  "hasLineColor": false
+                }
+              ],
+              "nodes": null
+            },
+            {
+              "id": "2-1-2-2",
+              "parentId": ["2-1-2-1"],
+              "first": false,
+              "position": "right-bottom",
+              "status": 1,
+              "image": "spell_firefrost-orb",
+              "text": "Sagesse +1D4",
+              "improvementOf": null,
+              "isSquare": false,
+              "hasLineColor": false,
+              "parentsLines": null,
+              "nodes": null
+            },
+            {
+              "id": "2-1-2-3",
+              "parentId": ["2-1-2-2"],
+              "first": false,
+              "position": "middle",
+              "status": 1,
+              "image": "spell_firefrost-orb",
+              "text": "Perception +1D4",
+              "improvementOf": null,
+              "isSquare": false,
+              "hasLineColor": false,
+              "parentsLines": null,
+              "nodes": null
+            },
+            {
+              "id": "2-1-2-4",
+              "parentId": ["2-1-2-3", "5-6"],
+              "first": false,
+              "position": "middle",
+              "status": 1,
+              "image": "spell_firefrost-orb",
+              "text": "Efficacité armure +1",
+              "improvementOf": null,
+              "isSquare": false,
+              "hasLineColor": false,
+              "parentsLines": [
+                {
+                  "top": 20,
+                  "left": 70,
+                  "rotation": 60,
+                  "length": 120,
+                  "hasLineColor": false
+                }
+              ],
+              "nodes": null
+            },
+            {
+              "id": "2-1-2-5",
+              "parentId": ["2-1-2-4", "5-7"],
+              "first": false,
+              "position": "right-bottom",
+              "status": 1,
+              "image": "spell_firefrost-orb",
+              "text": "Bouclier vengeur: crée un bouclier qui explose inflige 1D12 autour de vous",
+              "improvementOf": null,
+              "isSquare": true,
+              "hasLineColor": false,
+              "parentsLines": [
+                {
+                  "top": -10,
+                  "left": 100,
+                  "rotation": 60,
+                  "length": 130,
+                  "hasLineColor": false
+                }
+              ],
+              "nodes": null
+            }
+          ]
+        },
+        {
+          "id": "2-1-3",
+          "parentId": ["2-1-2"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Soins +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-1-4",
+          "parentId": ["2-1-3", "2-1-2-1"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Main de liberté: libère un allié effet contrôle",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": -10,
+              "left": 50,
+              "rotation": 25,
+              "length": 100,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "2-1-5",
+          "parentId": ["2-1-4", "2-2-2"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Force + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": -10,
+              "left": -80,
+              "rotation": -50,
+              "length": 150,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "2-1-6",
+          "parentId": ["2-1-5"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Endurance +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-1-7",
+          "parentId": ["2-1-6"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Palefroi Divin : invoque un cheval pour se déplacer pour ce tour",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-1-8",
+          "parentId": ["2-1-7", "2-2-4"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Votre arme dégage de la lumière en permanence",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": 0,
+              "left": -60,
+              "rotation": -45,
+              "length": 150,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "2-1-9",
+          "parentId": ["2-1-8"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "soigne 1D8",
+          "improvementOf": ["r-3", "Lumière sacrée"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-1-10",
+          "parentId": ["2-1-9", "2-2-6"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Lumière de l'aube : soigne 1D10 tous les alliés devant vous",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": 0,
+              "left": -60,
+              "rotation": -45,
+              "length": 150,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "2-1-11",
+          "parentId": ["2-1-10"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Soins +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-1-12",
+          "parentId": ["2-1-11"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Constitution + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-1-13",
+          "parentId": ["2-1-12"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Bouclier divin : vous êtes immunisé aux dégâts pendant un tour",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "2-2",
+      "parentId": ["2-1"],
+      "first": false,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Efficacité armure +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "0-0-0-0",
+          "parentId": ["2-2"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": null,
+          "text": "Perception +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-2-1",
+          "parentId": ["2-2"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Perception +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null,
+          "customPosition": {
+            "topToAdd": 63,
+            "leftToAdd": 39
+          }
+        },
+        {
+          "id": "2-2-2",
+          "parentId": ["2-2-1"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Soin reçu + 1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-2-3",
+          "parentId": ["2-2-2", "2-3-2"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Sagesse +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": 0,
+              "left": -50,
+              "rotation": -40,
+              "length": 100,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "0-0-0-0-0",
+          "parentId": ["2-2-3"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": null,
+          "text": "",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": 77,
+              "left": 1,
+              "rotation": 0,
+              "length": 50,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "2-2-4",
+          "parentId": ["2-2-3"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "éducation +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null,
+          "customPosition": {
+            "topToAdd": 122,
+            "leftToAdd": 18
+          }
+        },
+        {
+          "id": "2-2-5",
+          "parentId": ["2-2-4"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Vos échecs critiques soignent un allié pour 1D6",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-2-6",
+          "parentId": ["2-2-5"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Charisme + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-2-7",
+          "parentId": ["2-2-6"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Dégâts x2 contre mort-vivants",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "2-3",
+      "parentId": ["2-2", "1-2"],
+      "first": false,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Aura dévotion : défense +1 pour vous et alliés",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -30,
+          "left": -150,
+          "rotation": 105,
+          "length": 230,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": [
+        {
+          "id": "2-3-1",
+          "parentId": ["2-3"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Quand réussite critique : +1 prochain jet dé alliés",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-3-2",
+          "parentId": ["2-3-1"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Charisme + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-3-3",
+          "parentId": ["2-3-2"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Endurance +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-3-4",
+          "parentId": ["2-3-3"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "défense +2 pour vous et alliés",
+          "improvementOf": ["2-3", "Aura dévotion"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-3-5",
+          "parentId": ["2-3-4"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "inflige 1D6",
+          "improvementOf": ["1-1", "Bouclier vertueux"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-3-6",
+          "parentId": ["2-3-5", "2-2-4"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Soin reçu + 1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": 0,
+              "left": 60,
+              "rotation": 45,
+              "length": 150,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "2-3-7",
+          "parentId": ["2-3-6"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Sagesse +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "2-3-8",
+          "parentId": ["2-3-7", "2-2-6"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Main de protection : immunise un allié aux dégâts pendant 1 tour",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": 0,
+              "left": 60,
+              "rotation": 45,
+              "length": 150,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        }
+      ]
+    }
+  ],
+  "itemsThird": [
+    {
+      "id": "3-1",
+      "parentId": ["r-4"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Charisme + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "3-2",
+      "parentId": ["3-1"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Aura retribution : si allié KO, prochain jet force +4",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "3-3",
+      "parentId": ["3-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Constitution + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    }
+  ],
+  "itemsFourth": [
+    {
+      "id": "3-1",
+      "parentId": ["r-4"],
+      "first": true,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Charisme + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "4-2",
+      "parentId": ["4-1"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Aura retribution : si allié KO, prochain jet force +4",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "4-3",
+      "parentId": ["4-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Constitution + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    }
+  ],
+  "itemsLast": [
+    {
+      "id": "5-1",
+      "parentId": ["r-4"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Consécration : brûle le sol et inflige 1D4 chaque tour",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "5-1-1",
+          "parentId": ["5-1"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Vous pouvez équiper une arme à 2 mains",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "5-1-2",
+          "parentId": ["5-1-1"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Efficacité arme +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "5-2",
+      "parentId": ["5-1", "3-1"],
+      "first": false,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Force + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -110,
+          "left": -200,
+          "rotation": -65,
+          "length": 320,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "5-3",
+      "parentId": ["5-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "inflige 1D8 dégâts",
+      "improvementOf": ["r-2", "Marteau divin"],
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "5-3-1",
+          "parentId": ["5-3", "5-1-2"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "inflige 1D10 dégâts",
+          "improvementOf": ["r-1", "Jugement"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": -10,
+              "left": 70,
+              "rotation": 45,
+              "length": 100,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "5-3-2",
+          "parentId": ["5-3-1"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Endurance +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "5-3-3",
+          "parentId": ["5-3-2"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "inflige 1D6 à chaque tour",
+          "improvementOf": ["5-1", "Consécration"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "5-3-4",
+          "parentId": ["5-3-3", "5-5-1"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Tempête divine : inflige 1D12 autour de vous",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": 20,
+              "left": -30,
+              "rotation": -45,
+              "length": 100,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "5-4",
+      "parentId": ["5-3", "3-3"],
+      "first": false,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Rend 1 PV si jet de force <= 16",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -50,
+          "left": -130,
+          "rotation": -55,
+          "length": 180,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "5-5",
+      "parentId": ["5-4", "5-3-1"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Verdict du templier: frappe un ennemi inflige 1D20",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": 0,
+          "left": 70,
+          "rotation": 45,
+          "length": 120,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": [
+        {
+          "id": "5-5-1",
+          "parentId": ["5-5"],
+          "first": true,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_firefrost-orb",
+          "text": "Force + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "5-6",
+      "parentId": ["5-5", "2-1-2-2"],
+      "first": true,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Soin reçu + 1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -60,
+          "left": -120,
+          "rotation": -45,
+          "length": 200,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "5-7",
+      "parentId": ["5-6", "5-5-1"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Efficacité arme +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": 10,
+          "left": 70,
+          "rotation": 45,
+          "length": 120,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "5-8",
+      "parentId": ["5-7", "5-3-4"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "touche plusieurs ennemis",
+      "improvementOf": ["r-1", "Jugement"],
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": 20,
+          "left": 80,
+          "rotation": 45,
+          "length": 100,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "5-9",
+      "parentId": ["5-8"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Trainée de cendres: inflige 1D20 dégâts devant vous, réduit en cendre démons et mort-vivants",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "5-10",
+      "parentId": ["5-9"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Utiliser une masse à 2 mains utilise moins d'endurance",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "5-11",
+      "parentId": ["5-10"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Marteau du courroux : inflige 1D100 dégâts à un ennemi mourrant",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "5-12",
+      "parentId": ["5-11"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "améliore prochain jet dés force + 2",
+      "improvementOf": ["5-5", "Verdict du templier"],
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "5-13",
+      "parentId": ["5-12"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Force + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "5-14",
+      "parentId": ["5-13"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Condamnation à mort : Jet de force +3 contre un ennemi jusqu'à sa mort",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "5-15",
+      "parentId": ["5-14"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_firefrost-orb",
+      "text": "Courroux vengeur : augmente de 5 vos jets de force pour plusieurs tours",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    }
+  ]
+}

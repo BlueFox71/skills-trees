@@ -131,6 +131,7 @@ const Skill = ({
   const renderTooltip = () => {
     return (
       <>
+          <span>{item.id}</span><br/>
         {item.improvementOf !== null && (
           <>
             <span style={{ fontStyle: "italic" }}>
