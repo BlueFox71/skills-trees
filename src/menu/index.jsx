@@ -24,7 +24,7 @@ const Menu = () => {
     {
       label: "Chaman",
       value: CHARACTER_CLASS.CHAMAN,
-      disabled: true,
+      disabled: false,
     },
     {
       label: "Chasseur",
@@ -73,7 +73,6 @@ const Menu = () => {
     setData(getDataSkillTree(classCharacter));
     setVisual(true);
     setSimulationInProgress(false);
-
   };
 
   const handleStart = () => {
