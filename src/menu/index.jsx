@@ -1,10 +1,11 @@
-import { Button, Col, Divider, Form, Row } from "antd";
+import { Badge, Button, Col, Divider, Form, Image, Row } from "antd";
 import { CHARACTER_CLASS } from "../utils/enum";
 import { useState } from "react";
 
 import SkillTree from "../skillTree";
 import styled from "styled-components";
 import { getBackgroundSection, getDataSkillTree } from "../utils/data";
+import { FormatPainterOutlined } from "@ant-design/icons";
 
 const SectionSkillTree = styled.section`
   background-image: url(${(props) => getBackgroundSection(props.character)});
@@ -49,7 +50,7 @@ const Menu = () => {
     {
       label: "Prêtre",
       value: CHARACTER_CLASS.PRETRE,
-      disabled: true,
+      disabled: false,
     },
     {
       label: "Voleur",
@@ -92,14 +93,36 @@ const Menu = () => {
         <Row align={"center"} style={{ width: "100%", margin: "0 auto" }}>
           {buttons.map((item) => (
             <Col>
-              <Button
-                style={{ margin: "5px" }}
-                className={`button-menu ${item.value}`}
-                onClick={() => handleChooseCharacter(item.value)}
-                disabled={item.disabled}
-              >
-                {item.label}
-              </Button>
+              {item.disabled ? (
+                <Badge
+                  count={
+                    <FormatPainterOutlined
+                      style={{
+                        color: "white",
+                        position: "absolute",
+                        left: "80px",
+                        top: "60px",
+                      }}
+                    />
+                  }
+                >
+                  <Button
+                    style={{ margin: "5px" }}
+                    className={`button-menu ${item.value}`}
+                    onClick={() => handleChooseCharacter(item.value)}
+                  >
+                    {item.label}
+                  </Button>
+                </Badge>
+              ) : (
+                <Button
+                  style={{ margin: "5px" }}
+                  className={`button-menu ${item.value}`}
+                  onClick={() => handleChooseCharacter(item.value)}
+                >
+                  {item.label}
+                </Button>
+              )}
             </Col>
           ))}
           <Divider />
@@ -132,15 +155,26 @@ const Menu = () => {
               </Row>
             </Form>
           </section>
-          <SectionSkillTree id="container-skill-tree" character={character}>
-            <SkillTree
-              points={points}
-              character={character}
-              data={data}
-              visual={visual}
-              simulationInProgress={simulationInProgress}
-            />
-          </SectionSkillTree>
+          {buttons.find(
+            (item) => item.value === character && !item.disabled
+          ) ? (
+            <SectionSkillTree id="container-skill-tree" character={character}>
+              <SkillTree
+                points={points}
+                character={character}
+                data={data}
+                visual={visual}
+                simulationInProgress={simulationInProgress}
+              />
+            </SectionSkillTree>
+          ) : (
+            <div style={{ margin: "0 auto", width: "1000px" }}>
+              <Image
+                src={require(`../asserts/images/${character}/skill_tree.png`)}
+                preview={false}
+              ></Image>
+            </div>
+          )}
         </>
       )}
     </div>

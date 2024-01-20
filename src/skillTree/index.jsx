@@ -72,6 +72,46 @@ const SkillTree = ({
               child.props.item.parentsLines[0].hasLineColor = true;
             }
           });
+          //double direction coté item sélectionné
+          if (item.parentsLines && item.parentsLines) {
+            item.parentsLines.forEach((parent) => {
+              if (parent.directionDouble) {
+                parent.hasLineColor = true;
+                const child = currentSkills.find(
+                  (x) => x.props.item.id === parent.directionDouble
+                );
+                if (child.props.item.status !== STATUS_SKILL.IS_SELECTED) {
+                  child.props.item.status = STATUS_SKILL.CAN_BE_SELECTED;
+                }
+              }
+            });
+          }
+          //vérifie si un skill a une parent ligne liée à celui-ci
+          currentSkills.forEach((x) =>
+            x.props.item.parentsLines?.forEach((parent) => {
+              if (parent.directionDouble === item.id) {
+                parent.hasLineColor = true;
+                if (x.props.item.status !== STATUS_SKILL.IS_SELECTED) {
+                  x.props.item.status = STATUS_SKILL.CAN_BE_SELECTED;
+                }
+              }
+            })
+          );
+          //vérifie si un skill a une ligne liée à celui-ci
+          currentSkills.forEach((x) => {
+            const directionDouble = x.props.item.directionDouble;
+            if (directionDouble && directionDouble[0] === item.id) {
+              if (directionDouble[1] === "parent") {
+                x.props.item.parentsLines[0].hasLineColor = true;
+              } else {
+                item.hasLineColor = true;
+              }
+              if (x.props.item.status !== STATUS_SKILL.IS_SELECTED) {
+                x.props.item.status = STATUS_SKILL.CAN_BE_SELECTED;
+              }
+            }
+          });
+
           if (item.id === "r-4") {
             setRootLineColor(data.lineColor);
           }
@@ -105,6 +145,41 @@ const SkillTree = ({
               }
             });
           }
+
+          //double direction coté item désélectionné
+          if (item.parentsLines && item.parentsLines) {
+            item.parentsLines.forEach((parent) => {
+              if (parent.directionDouble) {
+                const child = currentSkills.find(
+                  (x) => x.props.item.id === parent.directionDouble
+                );
+                if (child.props.item.status !== STATUS_SKILL.CAN_BE_SELECTED) {
+                  parent.hasLineColor = false;
+                  child.props.item.status = STATUS_SKILL.CANNOT_BE_SELECTED;
+                }
+              }
+            });
+          }
+          //vérifie si un skill a une parent ligne liée à celui-ci
+          currentSkills.forEach((x) =>
+            x.props.item.parentsLines?.forEach((parent) => {
+              if (parent.directionDouble === item.id) {
+                if (x.props.item.status !== STATUS_SKILL.CAN_BE_SELECTED) {
+                  parent.hasLineColor = false;
+                  x.props.item.status = STATUS_SKILL.CANNOT_BE_SELECTED;
+                }
+              }
+            })
+          );
+          //vérifie si un skill a une ligne liée à celui-ci
+          currentSkills.forEach((x) => {
+            if (x.props.item.directionDouble === item.id) {
+              if (x.props.item.status !== STATUS_SKILL.CAN_BE_SELECTED) {
+                x.props.item.hasLineColor = false;
+                x.props.item.status = STATUS_SKILL.CANNOT_BE_SELECTED;
+              }
+            }
+          });
         }
       }
     },

@@ -1,6 +1,6 @@
 export const addTop = (position, parentPosition, topToAdd) => {
-  if(topToAdd){
-    return topToAdd
+  if (topToAdd) {
+    return topToAdd;
   }
   switch (position) {
     case POSITION_SKILL.MIDDLE:
@@ -42,8 +42,8 @@ export const addTop = (position, parentPosition, topToAdd) => {
 };
 
 export const addLeft = (position, parentPosition, leftToAdd) => {
-  if(leftToAdd){
-    return leftToAdd
+  if (leftToAdd) {
+    return leftToAdd;
   }
   switch (position) {
     case POSITION_SKILL.MIDDLE:
@@ -101,7 +101,7 @@ export const ALIGN_SKILL = {
 };
 
 export const TRANSFORM_LINE = {
-  RIGHT: "rotate(90deg) translate(0,0)",
+  RIGHT: "rotate(90deg) translate(25px,0)",
   RIGHT_BOTTOM: "rotate(-40deg) translate(13px,3px)",
   MIDDLE: "rotate(0deg) translate(1px,8px)",
   LEFT_BOTTOM: "rotate(45deg) translate(-30px,10px)",
@@ -109,7 +109,7 @@ export const TRANSFORM_LINE = {
 };
 
 export const TRANSFORM_SKILL = {
-  RIGHT: "translate(50px,-70px)",
+  RIGHT: "translate(50px,-40px)",
   RIGHT_BOTTOM: "translate(35px,-30px)",
   MIDDLE: "translate(0,0)",
   LEFT_BOTTOM: "translate(-60px,-40px)",

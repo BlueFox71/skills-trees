@@ -67,7 +67,7 @@ const Skill = ({
   visual,
   onSelect,
   skills,
-  character
+  character,
 }) => {
   const [transformLine, setTransformLine] = useState(TRANSFORM_LINE.MIDDLE);
   const [transformSkill, setTransformSkill] = useState(TRANSFORM_SKILL.MIDDLE);
@@ -131,7 +131,6 @@ const Skill = ({
   const renderTooltip = () => {
     return (
       <>
-          <span>{item.id}</span><br/>
         {item.improvementOf !== null && (
           <>
             <span style={{ fontStyle: "italic" }}>
