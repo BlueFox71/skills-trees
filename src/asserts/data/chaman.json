@@ -92,6 +92,7 @@
           "isSquare": false,
           "hasLineColor": false,
           "parentsLines": null,
+          "customLineTranslate": "0,0",
           "customPosition": {
             "leftToAdd": 20,
             "topToAdd": 70
@@ -782,8 +783,8 @@
       "hasLineColor": false,
       "parentsLines": null,
       "nodes": null,
-      "customPosition":{
-        "topToAdd":80
+      "customPosition": {
+        "topToAdd": 80
       }
     }
   ],

@@ -6,6 +6,7 @@ import {
   POSITION_SKILL,
   TRANSFORM_LINE,
   TRANSFORM_SKILL,
+  getCustomTransformLine,
 } from "../../utils/position";
 import { STATUS_SKILL } from "../../utils/enum";
 import { Tooltip } from "antd";
@@ -122,7 +123,10 @@ const Skill = ({
         break;
       }
     }
-  }, [item.position]);
+    if (item.customLineTranslate) {
+      setTransformLine(getCustomTransformLine(item.customLineTranslate));
+    }
+  }, [item]);
 
   const handleSelect = () => {
     onSelect(item, skills);

@@ -232,7 +232,14 @@ const SkillTree = ({
             item.customPosition?.leftToAdd
           );
           skills.push(
-            getSkill(item, topNode, leftNode, lineColor, skillColor, false)
+            getSkill(
+              item,
+              topNode,
+              leftNode,
+              lineColor,
+              skillColor,
+              false,
+            )
           );
           parentPositionNode = item.position;
           generateNodes(
@@ -274,8 +281,9 @@ const SkillTree = ({
           item.customPosition?.leftToAdd
         );
         parentPosition = item.position;
-
-        skills.push(getSkill(item, top, left, lineColor, skillColor, first));
+        skills.push(
+          getSkill(item, top, left, lineColor, skillColor, first)
+        );
         skills = generateNodes(
           item,
           top + 30,

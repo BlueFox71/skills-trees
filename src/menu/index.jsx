@@ -55,7 +55,7 @@ const Menu = () => {
     {
       label: "Voleur",
       value: CHARACTER_CLASS.VOLEUR,
-      disabled: true,
+      disabled: false,
     },
     {
       label: "Guerrier",

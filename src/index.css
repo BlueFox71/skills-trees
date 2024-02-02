@@ -141,6 +141,7 @@ body {
 
 .button-menu:active:not(:disabled) {
   color: #ccc;
+  border: none;
 }
 
 .button-menu:active:not(:disabled):before {

@@ -4,7 +4,7 @@ export const addTop = (position, parentPosition, topToAdd) => {
   }
   switch (position) {
     case POSITION_SKILL.MIDDLE:
-      if (POSITION_SKILL.MIDDLE === parentPosition) return 90;
+      if (POSITION_SKILL.MIDDLE === parentPosition) return 88;
       if (POSITION_SKILL.LEFT_BOTTOM === parentPosition) return 50;
       if (POSITION_SKILL.RIGHT_BOTTOM === parentPosition) return 60;
       if (POSITION_SKILL.LEFT === parentPosition) return 30;
@@ -114,4 +114,8 @@ export const TRANSFORM_SKILL = {
   MIDDLE: "translate(0,0)",
   LEFT_BOTTOM: "translate(-60px,-40px)",
   LEFT: "translate(-50px,-50px)",
+};
+
+export const getCustomTransformLine = (translate) => {
+  return `rotate(90deg) translate(${translate})`;
 };

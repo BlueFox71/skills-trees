@@ -1,0 +1,1499 @@
+{
+  "lineColor": "#02FC02",
+  "skillColor": "#FFFF00",
+  "primaryColor": "#DAF58C",
+  "count": 83,
+  "firstWay": "voie de l'assassinat",
+  "secondWay": "voie des hors-la-loi",
+  "firstWayLeft": 100,
+  "secondWayLeft": 540,
+  "itemsRoot": [
+    {
+      "id": "r-1",
+      "parentId": null,
+      "first": true,
+      "withoutLine": true,
+      "position": "middle",
+      "status": 2,
+      "image": "ability_stealth",
+      "text": "Camouflage : augmente grandement votre discrétion",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "r-2",
+      "parentId": ["r-1"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_poisons",
+      "text": "Poison instantané : +1 dégât armes. 1 poison à la fois",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": true,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "r-3",
+      "parentId": ["r-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_waylay",
+      "text": "Efficacité arme +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "r-4",
+      "parentId": ["r-3"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_ambush",
+      "text": "Embuscade : planter une lame inflige 1D10. nécessite être camouflé et dans le dos",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    }
+  ],
+  "itemsFirst": [
+    {
+      "id": "1-1",
+      "parentId": ["r-4"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_shadowstep",
+      "text": "Pas de l'ombre : vous vous téléportez derrière l'ennemi",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "1-1-1",
+          "parentId": ["1-1"],
+          "first": true,
+          "position": "left-bottom",
+          "status": 1,
+          "image": "archaeology_5_0_changkiboard",
+          "text": "Initiative +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "1-1-2",
+          "parentId": ["1-1-1"],
+          "first": true,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_shadow_ritualofsacrifice",
+          "text": "Dextérité + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "1-1-3",
+          "parentId": ["1-1-2"],
+          "first": true,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_rogue_turnthetables",
+          "text": "Discrétion +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "1-1-4",
+          "parentId": ["1-1-3"],
+          "first": true,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_rogue_waylay",
+          "text": "Efficacité arme +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "1-2",
+      "parentId": ["1-1"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "ability_rogue_venomouswounds",
+      "text": "Efficacité poison +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "1-2-1",
+          "parentId": ["1-2"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "ability_rogue_poisonedknife",
+          "text": "Dague empoisonné : dague inflige 1D4 + 1D4 au tour suivant fonctionne à distance",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "1-2-2",
+          "parentId": ["1-2-1", "2-3"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "spell_shadow_shadowworddominate",
+          "text": "Vous voyez plus facilement les pièges",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": -60,
+              "left": 90,
+              "rotation": 45,
+              "length": 180,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "1-2-3",
+          "parentId": ["1-2-2"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_rogue_ambush",
+          "text": "Inflige 1D12",
+          "improvementOf": ["r-4", "Embuscade"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "0-B",
+          "parentId": ["1-2-3"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": null,
+          "text": "Force + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "1-2-4",
+          "parentId": ["1-2-3", "1-5", "2-6-1"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_rogue_venomouswounds",
+          "text": "Efficacité poison +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": 5,
+              "left": -60,
+              "rotation": -45,
+              "length": 150,
+              "hasLineColor": false
+            },
+            {
+              "top": 30,
+              "left": 60,
+              "rotation": 60,
+              "length": 120,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "1-2-5",
+          "parentId": ["1-2-4"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_rogue_dualweild",
+          "text": "Poison mortel : chaque tour inflige 1D6 dégâts. 1 poison à la fois",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": [
+            {
+              "id": "1-2-5-1",
+              "parentId": ["1-2-5"],
+              "first": false,
+              "position": "right-bottom",
+              "status": 1,
+              "image": "rogue_leeching_poison",
+              "text": "Votre résistance aux poisons est amélioré",
+              "improvementOf": null,
+              "isSquare": false,
+              "hasLineColor": false,
+              "parentsLines": null,
+              "nodes": null
+            },
+            {
+              "id": "1-2-5-2",
+              "parentId": ["1-2-5-1"],
+              "first": false,
+              "position": "middle",
+              "status": 1,
+              "image": "spell_shadow_ritualofsacrifice",
+              "text": "Dextérité + 1D4",
+              "improvementOf": null,
+              "isSquare": false,
+              "hasLineColor": false,
+              "parentsLines": null,
+              "nodes": null
+            }
+          ]
+        },
+        {
+          "id": "0-C",
+          "parentId": ["1-2-5"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": null,
+          "text": "Force + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "1-2-6",
+          "parentId": ["1-2-5"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_shadow_ritualofsacrifice",
+          "text": "Dextérité + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "1-2-7",
+          "parentId": ["1-2-6", "1-2-5-2"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_rogue_turnthetables",
+          "text": "Discrétion +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": 40,
+              "left": 40,
+              "rotation": 45,
+              "length": 90,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        },
+        {
+          "id": "1-2-8",
+          "parentId": ["1-2-7", "2-11"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "ability_rogue_venomouswounds",
+          "text": "Efficacité poison +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": -15,
+              "left": 120,
+              "rotation": 80,
+              "length": 150,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "1-3",
+      "parentId": ["1-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_restlessblades",
+      "text": "Pv + 1D6",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "0-A",
+      "parentId": ["1-3"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": null,
+      "text": "",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-4",
+      "parentId": ["1-3"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_masterofsubtlety",
+      "text": "Si vous vous faites désarmé, volez plus facilement l'ennemi",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "customPosition": null,
+      "nodes": null
+    },
+    {
+      "id": "1-5",
+      "parentId": ["1-4"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "inv_misc_dice_02",
+      "text": "Globalement vous trouvez plus facilement de l'argent",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-6",
+      "parentId": ["1-5", "1-1-4"],
+      "first": true,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "ability_poisonsting",
+      "text": "Poison affaiblissant : affaibli l'ennemi. 1 poison à la fois",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -70,
+          "left": -80,
+          "rotation": -15,
+          "length": 150,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "1-7",
+      "parentId": ["1-6"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_garrote",
+      "text": "Garrot: chaque tour subit 1D4 dégâts, nécessite camouflage",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-8",
+      "parentId": ["1-7", "1-2-5"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "inv_misc_bag_11",
+      "text": "Charisme +1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -15,
+          "left": 110,
+          "rotation": 50,
+          "length": 180,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "1-9",
+      "parentId": ["1-8"],
+      "first": false,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "ability_rogue_rupture",
+      "text": "Rupture : double les prochains dégâts de garrot",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-10",
+      "parentId": ["1-9"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "inv_misc_herb_fellotus",
+      "text": "Vous pouvez avoir 2 poisons simultanément",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-11",
+      "parentId": ["1-10"],
+      "first": true,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "ability_rogue_rupture",
+      "text": "triple les dégâts au lieu de doubler",
+      "improvementOf": ["1-9", "Rupture"],
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "1-12",
+      "parentId": ["1-11", "1-2-8"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "rogue_paralytic_poison",
+      "text": "Fiole de poison : nuage toxique dans une zone inflige 1D10 dégâts par tour",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -10,
+          "left": 100,
+          "rotation": 60,
+          "length": 230,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    }
+  ],
+  "itemsSecond": [
+    {
+      "id": "2-1",
+      "parentId": ["r-4"],
+      "first": true,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "inv_misc_bag_11",
+      "text": "Charisme +1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "2-2",
+      "parentId": ["2-1"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_restlessblades",
+      "text": "Pv + 1D6",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "2-3",
+      "parentId": ["2-2"],
+      "first": false,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "archaeology_5_0_changkiboard",
+      "text": "Initiative +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "2-4",
+      "parentId": ["2-3"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "spell_nature_moonkey",
+      "text": "Efficacité crochetage augmenté",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "0-G",
+      "parentId": ["2-4"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": null,
+      "text": null,
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "2-6",
+      "parentId": ["2-4"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_restlessblades",
+      "text": "Pv + 1D6",
+      "improvementOf": ["2-1", "Second souffle"],
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "2-6-1",
+          "parentId": ["2-6"],
+          "first": false,
+          "position": "left-bottom",
+          "status": 1,
+          "image": "ability_rogue_fanofknives",
+          "text": "Éventail de couteau : inflige 1D6 autour de vous",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "customPosition": {
+            "topToAdd": 110,
+            "leftToAdd": -20
+          },
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "2-7",
+      "parentId": ["2-6"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "rogue_subterfuge",
+      "text": "Efficacité augmenté pour fouiller les gens",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "0-D",
+      "parentId": ["2-7"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": null,
+      "text": "",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "2-8",
+      "parentId": ["2-7", "3-5-1", "1-2-4"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_turnthetables",
+      "text": "Discrétion +1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": 15,
+          "left": 45,
+          "rotation": 30,
+          "length": 150,
+          "hasLineColor": false
+        },
+        {
+          "top": -55,
+          "left": -110,
+          "rotation": -55,
+          "length": 250,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "2-9",
+      "parentId": ["2-8"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_shadowdance",
+      "text": "Danse de l'ombre : permet pendant quelques tours d'utiliser les compétences nécessitant camouflage sans être camouflé",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "2-10",
+      "parentId": ["2-9"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_cheatdeath",
+      "text": "Endurance +1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "2-11",
+      "parentId": ["2-10"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_vanish",
+      "text": "Disparition : camouflage d'urgence en combat",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "2-12",
+      "parentId": ["2-11", "3-8-2"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "ability_stealth",
+      "text": "Augmente grandement votre discrétion",
+      "improvementOf": ["r-1", "Camouflage"],
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -60,
+          "left": 75,
+          "rotation": 20,
+          "length": 200,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "2-13",
+      "parentId": ["2-12", "3-11"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "ability_rogue_shroudofconcealment",
+      "text": "Voile de dissimulation : augmente grandement la discrétion de vous et alliés autour",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -25,
+          "left": 50,
+          "rotation": 20,
+          "length": 150,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    }
+  ],
+  "itemsThird": [
+    {
+      "id": "3-1",
+      "parentId": ["r-4"],
+      "first": true,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "ability_butcher_heavyhanded",
+      "text": "Constitution + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "3-1-1",
+          "parentId": ["3-1"],
+          "first": true,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "ability_rogue_tricksofthetrade",
+          "text": "Perception +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "0-H",
+          "parentId": ["3-1-1"],
+          "first": true,
+          "position": "middle",
+          "status": 1,
+          "image": null,
+          "text": "",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "3-1-2",
+          "parentId": ["3-1-1"],
+          "first": true,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_shadow_rune",
+          "text": "Soin reçu +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "3-1-3",
+          "parentId": ["3-1-2", "4-1-2-1"],
+          "first": true,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_butcher_heavyhanded",
+          "text": "Constitution + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": -10,
+              "left": 70,
+              "rotation": 55,
+              "length": 150,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "3-2",
+      "parentId": ["3-1"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_cheatdeath",
+      "text": "Endurance +1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "3-3",
+      "parentId": ["3-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_sap",
+      "text": "Assomer : nécessite camouflage",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "3-4",
+      "parentId": ["3-3"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_shadow_ritualofsacrifice",
+      "text": "Dextérité + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "0-E",
+      "parentId": ["3-4"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": null,
+      "text": "",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "0-F",
+      "parentId": ["3-4"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": null,
+      "text": "",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "3-5",
+      "parentId": ["3-4", "3-1-3"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "ability_rogue_tricksofthetrade",
+      "text": "Perception +1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -20,
+          "left": 40,
+          "rotation": 10,
+          "length": 150,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": [
+        {
+          "id": "3-5-1",
+          "parentId": ["3-5"],
+          "first": false,
+          "position": "left-bottom",
+          "status": 1,
+          "image": "ability_sap",
+          "text": "Inflige 1D4 de dégâts",
+          "improvementOf": ["3-3", "Assomer"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null,
+          "customPosition": {
+            "topToAdd": 90,
+            "leftToAdd": 17
+          }
+        }
+      ],
+      "customPosition": {
+        "topToAdd": 90,
+        "leftToAdd": 17
+      }
+    },
+    {
+      "id": "3-6",
+      "parentId": ["3-5"],
+      "first": false,
+      "position": "right-bottom",
+      "status": 1,
+      "image": "spell_shadow_mindsteal",
+      "text": "Cécité : aveugle temporairement un ennemi",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "3-7",
+      "parentId": ["3-6"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_waylay",
+      "text": "Efficacité arme +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "3-8",
+      "parentId": ["3-7"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "spell_shadow_shadowward",
+      "text": "Évasion : augmente sa chance d'esquiver une attaque",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "3-8-1",
+          "parentId": ["3-8", "2-8"],
+          "first": false,
+          "position": "left-bottom",
+          "status": 1,
+          "image": "inv_misc_bag_11",
+          "text": "Charisme +1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": -60,
+              "left": -120,
+              "rotation": -45,
+              "length": 150,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null,
+          "customPosition": {
+            "leftToAdd": -40,
+            "topToAdd": 100
+          }
+        },
+        {
+          "id": "3-8-2",
+          "parentId": ["3-8-1"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "spell_shadow_mindsteal",
+          "text": "si réussite critique naturel avec cécité, arrache les yeux",
+          "improvementOf": ["3-6", "Cécité"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "3-9",
+      "parentId": ["3-8"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_restlessblades",
+      "text": "Pv + 1D6",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "3-10",
+      "parentId": ["3-9"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "inv_misc_dice_01",
+      "text": "Vos jets de dé à 19 sont arrondi à 20",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "3-11",
+      "parentId": ["3-10", "3-8-2"],
+      "first": false,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "ability_rogue_keepitrolling",
+      "text": "Une fois par combat si le résultat d'un jet dés ne vous plaît pas, relancez-le",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -25,
+          "left": -60,
+          "rotation": -10,
+          "length": 150,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    }
+  ],
+  "itemsLast": [
+    {
+      "id": "4-1",
+      "parentId": ["r-4"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_grapplinghook",
+      "text": "Grappin : lance un grappin pour faire tracter vers lui",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": [
+        {
+          "id": "4-1-1",
+          "parentId": ["4-1"],
+          "first": true,
+          "position": "left-bottom",
+          "status": 1,
+          "image": "spell_shadow_ritualofsacrifice",
+          "text": "Dextérité + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null,
+          "customPosition": { "leftToAdd": -40, "topToAdd": 130 }
+        },
+        {
+          "id": "4-1-2",
+          "parentId": ["4-1-1"],
+          "first": true,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_rogue_distract",
+          "text": "Distraction : distrait un ennemi nécessite un camouflage",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": [
+            {
+              "id": "4-1-2-1",
+              "parentId": ["4-1-2"],
+              "first": true,
+              "position": "left-bottom",
+              "status": 1,
+              "image": "archaeology_5_0_changkiboard",
+              "text": "Initiative +1",
+              "improvementOf": null,
+              "isSquare": false,
+              "hasLineColor": false,
+              "parentsLines": null,
+              "nodes": null,
+              "customPosition": {
+                "leftToAdd": -50,
+                "topToAdd": 100
+              }
+            }
+          ]
+        },
+        {
+          "id": "4-1-3",
+          "parentId": ["4-1-2"],
+          "first": true,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_rogue_waylay",
+          "text": "Efficacité arme +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "4-1-4",
+          "parentId": ["4-1-3"],
+          "first": true,
+          "position": "left-bottom",
+          "status": 1,
+          "image": "ability_kick",
+          "text": "Coup de pied : donne un coup qui déstabilise",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "4-1-5",
+          "parentId": ["4-1-4"],
+          "first": true,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "ability_rogue_restlessblades",
+          "text": "Pv + 1D6",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "4-1-6",
+          "parentId": ["4-1-5"],
+          "first": true,
+          "position": "left-bottom",
+          "status": 1,
+          "image": "spell_shadow_ritualofsacrifice",
+          "text": "Dextérité + 1D4",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "4-2",
+      "parentId": ["4-1"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_tricksofthetrade",
+      "text": "Perception +1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "4-3",
+      "parentId": ["4-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_warrior_challange",
+      "text": "Efficacité armure +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "4-4",
+      "parentId": ["4-3"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_cheatdeath",
+      "text": "Endurance +1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "4-5",
+      "parentId": ["4-4", "4-1-3"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_pistolshot",
+      "text": "Pistolet : tirer inflige 1D6 dégâts",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": 45,
+          "left": -50,
+          "rotation": -60,
+          "length": 100,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "0-I",
+      "parentId": ["4-5"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": null,
+      "text": "",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "4-6",
+      "parentId": ["4-5"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_crimsonvial",
+      "text": "Fiole cramoisi : rend 1D6 PV",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "4-7",
+      "parentId": ["4-6", "4-1-6"],
+      "first": false,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "ability_rogue_rollthebones",
+      "text": "Dés pipés : lance un D6 l'effet dépend du résultat",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": -10,
+          "left": -95,
+          "rotation": -60,
+          "length": 150,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": [
+        {
+          "id": "4-8",
+          "parentId": ["4-7"],
+          "first": false,
+          "position": "right-bottom",
+          "status": 1,
+          "image": "ability_rogue_crimsonvial",
+          "text": "Rend 1D8 PV",
+          "improvementOf": ["4-6", "Fiole cramoisi"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "4-9",
+          "parentId": ["4-8"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_rogue_pistolshot",
+          "text": "inflige 1D8 dégâts",
+          "improvementOf": ["1-5", "Pistolet"],
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "4-10",
+          "parentId": ["4-9"],
+          "first": false,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_warrior_punishingblow",
+          "text": "Tempête de lames : prochaine attaque touche tous ennnemi devant vous",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "4-11",
+          "parentId": ["4-10"],
+          "first": true,
+          "position": "middle",
+          "status": 1,
+          "image": "ability_warrior_challange",
+          "text": "Efficacité armure +1",
+          "improvementOf": null,
+          "isSquare": false,
+          "hasLineColor": false,
+          "parentsLines": null,
+          "nodes": null
+        },
+        {
+          "id": "4-11-1",
+          "parentId": ["4-11", "4-7-4"],
+          "first": false,
+          "position": "left-bottom",
+          "status": 1,
+          "image": "ability_rogue_murderspree",
+          "text": "Série meurtrière : frapper dans le dos de chaque ennemi inflige 1D20",
+          "improvementOf": null,
+          "isSquare": true,
+          "hasLineColor": false,
+          "parentsLines": [
+            {
+              "top": -25,
+              "left": -80,
+              "rotation": -45,
+              "length": 120,
+              "hasLineColor": false
+            }
+          ],
+          "nodes": null
+        }
+      ]
+    },
+    {
+      "id": "4-7-1",
+      "parentId": ["4-7", "3-7"],
+      "first": false,
+      "position": "left-bottom",
+      "status": 1,
+      "image": "archaeology_5_0_changkiboard",
+      "text": "Initiative +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": [
+        {
+          "top": 15,
+          "left": -110,
+          "rotation": -60,
+          "length": 120,
+          "hasLineColor": false
+        }
+      ],
+      "nodes": null
+    },
+    {
+      "id": "4-7-2",
+      "parentId": ["4-7-1"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_butcher_heavyhanded",
+      "text": "Constitution + 1D4",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "4-7-3",
+      "parentId": ["4-7-2"],
+      "first": false,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_rogue_sprint",
+      "text": "Sprint : augmente la vitesse de déplacement et d'initiative",
+      "improvementOf": null,
+      "isSquare": true,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    },
+    {
+      "id": "4-7-4",
+      "parentId": ["4-7-3"],
+      "first": true,
+      "position": "middle",
+      "status": 1,
+      "image": "ability_warrior_challange",
+      "text": "Efficacité armure +1",
+      "improvementOf": null,
+      "isSquare": false,
+      "hasLineColor": false,
+      "parentsLines": null,
+      "nodes": null
+    }
+  ]
+}
